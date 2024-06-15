@@ -1,0 +1,2143 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KATIPALLIYAHOSHUVA/Python-Notes-Basic-to-Advance-/blob/main/part2%263_Python.Collections%20to%20Functions\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Collections"
+      ],
+      "metadata": {
+        "id": "oCvYU2xUP2uA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "print(l1)\n",
+        "print(type(l1))\n",
+        "print(len(l1))\n",
+        "a = \"hello ,world\"\n",
+        "print(len(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qXu5htqVyKPI",
+        "outputId": "95996951-0c04-4096-9ae7-9a06d4b6a0a2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'cherries', 'kiwi']\n",
+            "<class 'list'>\n",
+            "4\n",
+            "12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi','cherries','cherries','cherries']\n",
+        "print(l1)\n",
+        "print(l1[0])\n",
+        "print(l1[-2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xV5SC68rzeDk",
+        "outputId": "47dbf37a-4cda-49b8-fbb1-458d49310f74"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'cherries', 'kiwi', 'cherries', 'cherries', 'cherries']\n",
+            "Apple\n",
+            "cherries\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(l1)\n",
+        "print(l1[1:4])\n",
+        "print(l1[-4:-1])\n",
+        "print(l1[::-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tfxIrzjh1_jd",
+        "outputId": "0869ae5b-2eff-4354-acfc-711be6e06b06"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'cherries', 'kiwi', 'cherries', 'cherries', 'cherries']\n",
+            "['Bananas', 'cherries', 'kiwi']\n",
+            "['kiwi', 'cherries', 'cherries']\n",
+            "['cherries', 'cherries', 'cherries', 'kiwi', 'cherries', 'Bananas', 'Apple']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['apple','banana','cherries','kiwi']\n",
+        "v = ' '\n",
+        "for x in l1:\n",
+        "  v = v +' '+ x\n",
+        "  v = v + x\n",
+        "print(v)\n",
+        "print(type(v))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IqY-_oRz2je_",
+        "outputId": "fc63749d-d131-49c4-e351-e22ff46e6b62"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "  appleapple bananabanana cherriescherries kiwikiwi\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['apple','banana','cherries','kiwi']\n",
+        "print(*l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W63zlZz03v6H",
+        "outputId": "c40f6228-11e0-4434-bb28-a72f93b21e6b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "apple banana cherries kiwi\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "for x in l1:\n",
+        "  print(x, end=' ')\n",
+        "print(x)\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MyS_JcXU3vYz",
+        "outputId": "d07499ee-75a0-4c85-b400-534df207759e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Apple Bananas cherries kiwi kiwi\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "print(l1[2])\n",
+        "l1[2] = 'mango'\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mNNbLMyM5qCi",
+        "outputId": "ca19f368-734b-499d-db01-7e40fbce3e95"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cherries\n",
+            "['Apple', 'Bananas', 'mango', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "print(l1[1:3])\n",
+        "l1[1:3] = ['papaya','orange']\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NQyFtSfx6KfM",
+        "outputId": "d7aaca8b-8f6f-4993-df8f-c345fc64cdc6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Bananas', 'cherries']\n",
+            "['Apple', 'papaya', 'orange', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "print(l1[1:3])\n",
+        "l1[1:3] = ['papaya','Stare berry','Orange']\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fghdrVtE72ru",
+        "outputId": "ee465eda-8479-4e4f-fa20-68b81c82cde8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Bananas', 'cherries']\n",
+            "['Apple', 'papaya', 'Stare berry', 'Orange', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "l1.append('orange')\n",
+        "print(l1)\n",
+        "l1 = ['Apple','Bananas','cherries','kiwi']\n",
+        "l1.insert(2,'mango')\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8ifFEtw387T3",
+        "outputId": "20c3ae43-356d-4e08-e35d-69ad0b02a202"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'cherries', 'kiwi', 'orange']\n",
+            "['Apple', 'Bananas', 'mango', 'cherries', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l2 = (10,20,30)\n",
+        "l1.extend(l2)\n",
+        "print(l1)\n",
+        "l2 = (10,20,30)\n",
+        "l1.extend(l2)\n",
+        "print(l1)\n",
+        "l1.insert(1,12)\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_ZR-3GWb9sAE",
+        "outputId": "4bbff46a-229e-4f7b-d194-671b37efd16c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 12, 'Bananas', 12, 'mango', 'cherries', 'kiwi', 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30]\n",
+            "['Apple', 12, 'Bananas', 12, 'mango', 'cherries', 'kiwi', 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30]\n",
+            "['Apple', 12, 12, 'Bananas', 12, 'mango', 'cherries', 'kiwi', 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10, 20, 30]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l3 = ['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20, 30]\n",
+        "l3.remove('Mango')\n",
+        "print(l3)\n",
+        "l3 = ['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20, 30]\n",
+        "l3.pop(2)\n",
+        "print(l3)\n",
+        "l3 = ['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20, 30]\n",
+        "l3.pop()\n",
+        "print(l3)\n",
+        "l3 = ['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20, 30]\n",
+        "l3.pop()\n",
+        "print(l3)\n",
+        "l4 = ['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20, 30]\n",
+        "del l4[1:4]\n",
+        "print(l4)\n",
+        "l4.clear()\n",
+        "print(l4)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C4k_LseQCIXw",
+        "outputId": "9e8c6f31-3243-48b3-f1ff-22a788568e42"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'cherries', 'kiwi', 10, 20, 30]\n",
+            "['Apple', 'Bananas', 'cherries', 'kiwi', 10, 20, 30]\n",
+            "['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20]\n",
+            "['Apple', 'Bananas', 'Mango', 'cherries', 'kiwi', 10, 20]\n",
+            "['Apple', 'kiwi', 10, 20, 30]\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l5 = ['Apple', 'Bananas', 'Mango', 'kiwi','Mango','Mango','Mango','Mango']\n",
+        "print(l5)\n",
+        "while 'Mango' in l5:\n",
+        "  l5.remove('Mango')\n",
+        "print(l5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iaBQhws6Eo_j",
+        "outputId": "a3a66276-e17e-4a80-afda-d24f62779b4a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'Mango', 'kiwi', 'Mango', 'Mango', 'Mango', 'Mango']\n",
+            "['Apple', 'Bananas', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l5 = ['Apple', 'Bananas', 'Mango', 'kiwi','Mango','Mango','Mango','Mango']\n",
+        "print(l5)\n",
+        "while 'Mango' in  l5:\n",
+        "  l5.remove('Mango')\n",
+        "print(l5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_xBZQ_XEE2Q7",
+        "outputId": "31174faf-08d3-4a29-bc77-76a26a2e412a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Apple', 'Bananas', 'Mango', 'kiwi', 'Mango', 'Mango', 'Mango', 'Mango']\n",
+            "['Apple', 'Bananas', 'kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l6 = ['Apple', 'Bananas', 'Mango', 'kiwi','Mango','Mango','Mango','Mango']\n",
+        "print(l6[::-1])\n",
+        "l6 = ['Apple', 'Bananas', 'Mango', 'kiwi','Mango','Mango','Mango','Mango']\n",
+        "print(l6[::-6])\n",
+        "l6 = ['Apple', 'Bananas', 'Mango', 'kiwi','Mango','Mango','Mango','Mango']\n",
+        "print(l6)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OKxsPAXHFpo1",
+        "outputId": "385822b9-98c5-4d8c-d5fe-7be98d821607"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Mango', 'Mango', 'Mango', 'Mango', 'kiwi', 'Mango', 'Bananas', 'Apple']\n",
+            "['Mango', 'Bananas']\n",
+            "['Apple', 'Bananas', 'Mango', 'kiwi', 'Mango', 'Mango', 'Mango', 'Mango']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t1 = ('Pine apple', 'Mango', 'Kiwi', 'Bananas', 'Apple')\n",
+        "print(type(t1))\n",
+        "print(len(t1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PQwMULS9HCdH",
+        "outputId": "0a2a4715-c8fb-40cf-a153-b65e9a34d355"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'tuple'>\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t1=('Pine apple', 'Mango', 'Kiwi', 'Bananas', 'Apple')\n",
+        "print(type(t1))\n",
+        "print(len(t1))\n",
+        "print(t1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kFuiJhVjHa9f",
+        "outputId": "5e32c7e8-1e22-4911-dfe8-36b4dd786f32"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'tuple'>\n",
+            "5\n",
+            "('Pine apple', 'Mango', 'Kiwi', 'Bananas', 'Apple')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(t1)\n",
+        "print(t1[1])\n",
+        "print(t1[1:5])\n",
+        "print(t1[::-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xfavbrzfH_dx",
+        "outputId": "ccbbbf20-4afa-494b-aace-af863d2ef375"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('Pine apple', 'Mango', 'Kiwi', 'Bananas', 'Apple')\n",
+            "Mango\n",
+            "('Mango', 'Kiwi', 'Bananas', 'Apple')\n",
+            "('Apple', 'Bananas', 'Kiwi', 'Mango', 'Pine apple')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s1 = {'Apple', 'Bananas', 'Kiwi', 'Mango', 'Pine apple'}\n",
+        "print(s1)\n",
+        "s2 = {'Apple', 'Bananas', 'Kiwi', 'Mango', 'Pine apple'}\n",
+        "print(s2)\n",
+        "print(type(s2))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HNsUq5PkJf0E",
+        "outputId": "a71c11c6-00f9-4af7-a738-580b46c6fae8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Bananas', 'Apple', 'Mango', 'Pine apple', 'Kiwi'}\n",
+            "{'Bananas', 'Apple', 'Mango', 'Pine apple', 'Kiwi'}\n",
+            "<class 'set'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#set = {}=unordered, unchangable, mot allowduplicate\n",
+        "s1 = {'Apple', 'Bananas', 'Kiwi', 'Mango', 'Pine apple','Apple'}\n",
+        "print(s1)\n",
+        "# s2 = {'Apple', 'Bananas', 'Kiwi', 'Mango', 'Pine apple'}\n",
+        "# print(s2)\n",
+        "# print(type(s2))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sDbD8z-xlU_n",
+        "outputId": "97e11845-fbdc-41e8-922b-6f603eddaa66"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Mango', 'Pine apple', 'Kiwi', 'Apple', 'Bananas'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s2 = {'Mango', 'Pine apple', 'Kiwi', 'Apple', 'Bananas'}\n",
+        "\n",
+        "#unchangable --->we can add and we can remove\n",
+        "\n",
+        "s2.add('orange')\n",
+        "\n",
+        "s3 = [10,20,30]\n",
+        "\n",
+        "s2.update(s3)\n",
+        "\n",
+        "# print(s2[1])\n",
+        "\n",
+        "print(s2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DShCFVFEmE3x",
+        "outputId": "3fb6e20f-7164-4607-f1a5-3eb3b856c5ea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Mango', 'Kiwi', 10, 'orange', 20, 30, 'Apple', 'Pine apple', 'Bananas'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#q) what is the default index position in a set when you add an item?\n",
+        "#A)their is no index position because it is unorderded"
+      ],
+      "metadata": {
+        "id": "FWS3hTxJoa_0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s1 = {'a','b','c','d'}\n",
+        "s2 = {'d','e','f','g'}\n",
+        "s3 = s1.union(s2)\n",
+        "print(s3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eO5krdEzpUaY",
+        "outputId": "d99a7c73-83e8-4c1d-8e09-0a4261bc6960"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'c', 'd', 'b', 'g', 'a', 'e', 'f'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task do intersection"
+      ],
+      "metadata": {
+        "id": "qW9EFf3fq0vn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "jv6Oi2T7q4ur"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Dectionaries\n"
+      ],
+      "metadata": {
+        "id": "Qbzs3sGeq5Oq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#dectionaries={}=ordered, changable, donot allow duplicates\n",
+        "#interpreter languagae-->run code line by line\n",
+        "d1 = {\"Name\": \"Python\",\n",
+        "      \"Last Name\":'Programming',\n",
+        "      \"Age\" : \"26\",\n",
+        "      \"Module\":True,\n",
+        "      \"Age\": 41,\n",
+        "      \"Name\": \"Python\"}\n",
+        "\n",
+        "print(d1)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AWnQ1ANFq9FD",
+        "outputId": "06f0e76d-be89-41d2-826e-b8cb1acfb4ae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': 'Python', 'Last Name': 'Programming', 'Age': 41, 'Module': True}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#we can access it through by key name\n",
+        "d2 = {\"Name\": \"Python\",\n",
+        "      \"Last Name\":'Programming',\n",
+        "      \"Age\" : \"26\",\n",
+        "      \"Module\":True,\n",
+        "      \"Age\": 41,\n",
+        "      \"Name\": \"Python\"}\n",
+        "print(d2[\"Name\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D3u-XCv6thP_",
+        "outputId": "9de02faa-5655-4670-9ac0-be2041de7444"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(len(d2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sNAdZayUvQx3",
+        "outputId": "5041664a-9153-468f-b72c-545d51f473be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#how to access item in a dectt?\n",
+        "x = d2['Module']\n",
+        "print(x)\n",
+        "\n",
+        "#another way of accessing\n",
+        "x2 = d2.get('Last Name')\n",
+        "print(x2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rcd3g7UXv_hW",
+        "outputId": "52f2fc8e-ee98-4db9-c65e-2438aaf55406"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "Programming\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#How can you change the values?\n",
+        "d2['Last Name'] = 'Language'\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_gVvw1Vcwt5J",
+        "outputId": "20e89aae-1005-48a6-ab75-115fc3757606"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': 'Python', 'Last Name': 'Language', 'Age': 41, 'Module': True}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#How can we add the values and keys?\n",
+        "#\n",
+        "d2['IDE'] = 'COLAB NOTEBOOK'\n",
+        "print(d2)\n",
+        "#2Update\n",
+        "\n",
+        "d2.update({'Age': 26})\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DFL4CEYLxASv",
+        "outputId": "a46d198c-6ecc-49d2-e5b5-dc59363226cf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': 'Python', 'Last Name': 'Programming', 'Age': 41, 'Module': True, 'IDE': 'COLAB NOTEBOOK'}\n",
+            "{'Name': 'Python', 'Last Name': 'Programming', 'Age': 26, 'Module': True, 'IDE': 'COLAB NOTEBOOK'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d5 = {\"Name\": [\"python\",\"java\"],\n",
+        "      \"Last Name\":'Programming',\n",
+        "      \"Age\" : \"26\",\n",
+        "      \"Module\":True,\n",
+        "      \"Age\": 41,\n",
+        "      \"Name\": \"Python\"\n",
+        "      }\n",
+        "\n",
+        "#Q access 1st value in dict having list of name replace the name?\n",
+        "\n",
+        "d5['Name'][0]   = 'c++'\n",
+        "print(d5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 228
+        },
+        "id": "GF08rLvKx4_r",
+        "outputId": "22d5f867-48d0-4d1c-b176-eab07b923637"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-4-8c5fb151d173>\u001b[0m in \u001b[0;36m<cell line: 11>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;31m#Q access 1st value in dict having list of name replace the name?\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 11\u001b[0;31m \u001b[0md5\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'Name'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m   \u001b[0;34m=\u001b[0m \u001b[0;34m'c++'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     12\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0md5\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'str' object does not support item assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [\"python\",\"java\", \"c++\"]\n",
+        "print(a[1])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4nEwsIwFuHyv",
+        "outputId": "00d3e267-dfb3-43b9-8a23-09ceeb1ca9d0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "java\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d2 = {\"Name\": [\"python\",\"java\"],\n",
+        "      \"Last Name\":'Programming',\n",
+        "      \"Age\" : \"26\",\n",
+        "      \"Module\":True,\n",
+        "      \"Age\": 41}\n",
+        "#if their is a list of values in dictionary choose this method\n",
+        "d2['Name'][1]   = 'c++'\n",
+        "\n",
+        "\n",
+        "d2.update({'Age':54})\n",
+        "print(d2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9a1at-ZSCGqx",
+        "outputId": "56a85a73-d741-4a5c-874f-2de2947f6322"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': ['python', 'c++'], 'Last Name': 'Programming', 'Age': 54, 'Module': True}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Add new item to the list in dictionaries\n",
+        "d2['Name'].append('R language')\n",
+        "\n",
+        "#Note:- if the keys are present in dictionary the value get updated if the keys are not present in the dictionary keys are added\n",
+        "d2['competition'] = 'R language'\n",
+        "print(d2)\n",
+        "\n",
+        "#Update\n",
+        "\n",
+        "d2.update({'Age':26})\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IugfdK16CUwg",
+        "outputId": "fed18f00-cebe-496c-954d-2aa7241a7d3b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': ['python', 'c++', 'R language', 'R language'], 'Last Name': 'Programming', 'Age': 26, 'Module': True, 'competition': 'R language'}\n",
+            "{'Name': ['python', 'c++', 'R language', 'R language'], 'Last Name': 'Programming', 'Age': 26, 'Module': True, 'competition': 'R language'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Removing items in the dictionary\n",
+        "#1.POP\n",
+        "\n",
+        "#But in dictionaries:-\n",
+        "print(d2.keys())\n",
+        "d2.pop('Age')\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 245
+        },
+        "id": "FAYX1hi4DLBA",
+        "outputId": "028f3f75-7cb3-46c3-f37c-8a7fdd14974c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-32-f4f78d97e160>\u001b[0m in \u001b[0;36m<cell line: 5>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;31m#But in dictionaries:-\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0md2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mkeys\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      6\u001b[0m \u001b[0md2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpop\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Age'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0md2\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'd2' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#revision:- in List when you use pop method by default it ill remove last item)\n",
+        "a = ['python', 'c++', 'R language', 'R language']\n",
+        "print(a)  #allow duplicates\n",
+        "a.pop()\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-H6cQciQ0gAH",
+        "outputId": "a3f554cf-68a0-4578-947e-8bef3012a77d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['python', 'c++', 'R language', 'R language']\n",
+            "['python', 'c++', 'R language']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Q)By default you want to remove last items in a dictionary then?\n",
+        "d2.popitem()\n",
+        "print(d2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "COX9QM1vEFsn",
+        "outputId": "539594dd-a32e-48a5-d540-35bc6c4da8c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': ['python', 'c++', 'R language', 'R language'], 'Last Name': 'Programming'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3. delete method\n",
+        "d3 = {\"fruit_name\":\"Apple\",\n",
+        "      \"price_kg\":\"50rs\",\n",
+        "      \"Name\":\"Srinivas\",\n",
+        "      \"Domain\":'Devops'}\n",
+        "\n",
+        "del d3['Domain']\n",
+        "\n",
+        "print(d3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Kzoc91bTEZgE",
+        "outputId": "226f0674-7eec-493e-d214-2853b5bc6188"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'fruit_name': 'Apple', 'price_kg': '50rs', 'Name': 'Srinivas'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4clear method\n",
+        "d3.clear()\n",
+        "print(d3)\n",
+        "\n",
+        "d2.clear()\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9UPcswZjEnrK",
+        "outputId": "10140960-dde0-4835-8ad2-d2a281b8838d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{}\n",
+            "{}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5 delete method\n",
+        "del d2\n",
+        "print(d2)"
+      ],
+      "metadata": {
+        "id": "KQgJUJUGEwwP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Working with loops in dictionaries"
+      ],
+      "metadata": {
+        "id": "avUggqedE8yP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d1 = {'Name':['python','Java'],\n",
+        "      'last_Name':'Programming',\n",
+        "      'Age' : 31,\n",
+        "      'Module':True,\n",
+        "      'No of modules':31,\n",
+        "      'competition':'Rlanguage'}\n",
+        "\n",
+        "#printing all the keys by using the loops\n",
+        "for x in d1.keys():\n",
+        "  print(x)\n",
+        "\n",
+        "#print all the values.\n",
+        "\n",
+        "for y in d1.values():\n",
+        "  print(y)\n",
+        "\n",
+        "\n",
+        "#how can i get both values by using the loops?\n",
+        "\n",
+        "for i in d1.keys():\n",
+        "  print(f'{i} = {d1[i]}')\n",
+        "\n",
+        "for X,Y in d1.items():\n",
+        "  print(f'{X}={Y}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RGDb3vIiE7wd",
+        "outputId": "35829776-0c9b-452d-a8d4-fef39289dd03"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name\n",
+            "last_Name\n",
+            "Age\n",
+            "Module\n",
+            "No of modules\n",
+            "competition\n",
+            "['python', 'Java']\n",
+            "Programming\n",
+            "31\n",
+            "True\n",
+            "31\n",
+            "Rlanguage\n",
+            "Name = ['python', 'Java']\n",
+            "last_Name = Programming\n",
+            "Age = 31\n",
+            "Module = True\n",
+            "No of modules = 31\n",
+            "competition = Rlanguage\n",
+            "Name=['python', 'Java']\n",
+            "last_Name=Programming\n",
+            "Age=31\n",
+            "Module=True\n",
+            "No of modules=31\n",
+            "competition=Rlanguage\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LIST=[]=ORDERED, Chnagable, allow duplicates\n",
+        "#Tupple=()=ordered, unchangle,allow duplicates\n",
+        "#set={}=unorderded,unchangble,not allow duplicates\n",
+        "##dectionaries={}=ordered, changable, donot allow duplicates"
+      ],
+      "metadata": {
+        "id": "SByuYs8U7nHg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d1 = {'Name':['python','Java'],\n",
+        "      'last_Name':'Programming',\n",
+        "      'Age' : 31,\n",
+        "      'Module':True,\n",
+        "      'No of modules':31,\n",
+        "      'competition':'Rlanguage'}\n",
+        "\n",
+        "del d1['Name'][1]\n",
+        "\n",
+        "print(d1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mfP0rLjA8-OY",
+        "outputId": "88b45b4b-48ab-41fa-9c3f-22ae6fb8ae55"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Name': ['python'], 'last_Name': 'Programming', 'Age': 31, 'Module': True, 'No of modules': 31, 'competition': 'Rlanguage'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Functions"
+      ],
+      "metadata": {
+        "id": "7TUuU0x03UxR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#what is function....?\n",
+        "#Block of code which only runs when it is called.\n",
+        "print('hello')\n",
+        "print(type('hello'))\n",
+        "print(len('hello'))"
+      ],
+      "metadata": {
+        "id": "FGD58TjN3T5W",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "79453a58-b78c-457a-eab9-9cacea988a0a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello\n",
+            "<class 'str'>\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.creating a fnction\n",
+        "def f1():\n",
+        "  print('Hello world!')\n",
+        "  print('This is running with functions')\n",
+        "  print(\"==================\")\n",
+        "\n",
+        "#Calling the function\n",
+        "f1()\n",
+        "f1()\n",
+        "f1()\n",
+        "f1()\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4H039ehxReMT",
+        "outputId": "7ffdb487-60c3-4fb0-e344-2cc94e3337af"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world!\n",
+            "This is running with functions\n",
+            "==================\n",
+            "Hello world!\n",
+            "This is running with functions\n",
+            "==================\n",
+            "Hello world!\n",
+            "This is running with functions\n",
+            "==================\n",
+            "Hello world!\n",
+            "This is running with functions\n",
+            "==================\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#parameter:-when you create a function with defining a varible is known as parameter\n",
+        "#Argument:-The value your given to a varaible is known as argument\n",
+        "\n",
+        "\n",
+        "\n",
+        "def f1(name):\n",
+        "  print(f'Hello {name}')\n",
+        "#call the function\n",
+        "f1('world')\n",
+        "f1('universe')\n",
+        "f1('python')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uWEGcJUlVCPy",
+        "outputId": "97cfbeca-d9fe-4bbd-9d84-f41c6d2cee14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world\n",
+            "Hello universe\n",
+            "Hello python\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#How many variable/parameters shall we give in function?\n",
+        "#How many value/arguments shall we give in function?\n",
+        "\n",
+        "#if you want to print default users instead of rising an error\n",
+        "def f1(name = 'user'):\n",
+        "  print(f'Hello {name}')\n",
+        "#call the function\n",
+        "f1('world')\n",
+        "f1('universe')\n",
+        "f1('python')\n",
+        "f1()\n",
+        "f1('India')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h1-_BQ42YG8h",
+        "outputId": "1db73d51-3581-49f2-e4fa-eba5a17ee17b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world\n",
+            "Hello universe\n",
+            "Hello python\n",
+            "Hello user\n",
+            "Hello India\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Usage of function in collections\n",
+        "def f2(n1,n2,n3,n4):\n",
+        "  print(f'hello, {n1}!')\n",
+        "  print(f'hello, {n2}!')\n",
+        "  print(f'hello, {n3}!')\n",
+        "  print(f'hello, {n4}!')\n",
+        "\n",
+        "#call\n",
+        "f2('pyhton','java','c++','R')\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i-Tkgh0zZEBG",
+        "outputId": "a654bb13-9d61-476f-be0d-dc257c7de0a9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello, pyhton!\n",
+            "hello, java!\n",
+            "hello, c++!\n",
+            "hello, R!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f3(*name):\n",
+        "  print(f'hello, {name}!')\n",
+        "\n",
+        "f3('pyhton','java','c++')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sBCyxJCBdrgi",
+        "outputId": "7b7ad2a6-d6b5-469e-c36b-3f3c20bb461a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello, ('pyhton', 'java', 'c++')!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#What do i do when i don't know how many arguments do i need to give?\n",
+        "def f3(*name):\n",
+        "\n",
+        "#Using for loop to print in separate lines\n",
+        "  for x in name:\n",
+        "    print(f'hello, {x}!')\n",
+        "    print(\"=============\")\n",
+        "\n",
+        "\n",
+        "#call the function\n",
+        "f3('pyhton','java','c++')\n",
+        "\n",
+        "f3('mopedo','Future tech')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nNnw1eNtbAgo",
+        "outputId": "78eab533-26de-4595-e5f6-6a09d8e425ee"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello, pyhton!\n",
+            "=============\n",
+            "hello, java!\n",
+            "=============\n",
+            "hello, c++!\n",
+            "=============\n",
+            "hello, mopedo!\n",
+            "=============\n",
+            "hello, Future tech!\n",
+            "=============\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#What do i do when i don't know how many parameters do i need to give?\n",
+        "def f3(**name):\n",
+        "#Using for loop to print in separate lines\n",
+        "    for x,y in name.items():\n",
+        "      print(f'{x} ={y}')\n",
+        "\n",
+        "#call the function\n",
+        "f3(Name='pyhton',Last_name = ' languagae',Age = 34)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mD-Y9pwOcycY",
+        "outputId": "df0589c3-2dd2-4964-c132-be82f3c9e35e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name =pyhton\n",
+            "Last_name = languagae\n",
+            "Age =34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f4(name,age,lastname):\n",
+        "  print(name,lastname,age, sep='\\n')\n",
+        "\n",
+        "f4(name = 'shahul',age=26,lastname='shaik')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y5YB5KSLfA7H",
+        "outputId": "0073adb6-a637-4e1d-b38b-607bfdccb085"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "shahul\n",
+            "shaik\n",
+            "26\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#*-->Arbitrary arguments--->when u dont know how many arguments\n",
+        "#**--->Arbitrary keyword arguments--->when u don't know how many keyword arguments you have sent"
+      ],
+      "metadata": {
+        "id": "IlDY832Qfp6h"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def dict1():\n",
+        "  d1 = {'Name':['python','Java'],\n",
+        "      'last_Name':'Programming',\n",
+        "      'Age' : 31,\n",
+        "      'Module':True,\n",
+        "      'No of modules':31,\n",
+        "      'competition':'Rlanguage'}\n",
+        "#printing all the keys by using the loops\n"
+      ],
+      "metadata": {
+        "id": "oPewvehEU6pc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Return keyword:-\n",
+        "print(len(\"hello\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gq3CrptSQTq4",
+        "outputId": "dac24543-6d9f-436f-9627-7823945390a9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f2(x):\n",
+        "  print(x)\n",
+        "#calling the function\n",
+        "f2(10)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1hu7EVe-RAyF",
+        "outputId": "7c4f767e-f0ee-4823-98b4-f2113b6de0ab"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f2(x):\n",
+        "  return x\n",
+        "#calling the function\n",
+        "f2(10)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MMtm2CijRe5X",
+        "outputId": "5410741a-09d8-4e6d-de8e-74129a2f7892"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#what is the purpose of return value?\n",
+        "\"\"\"When you return the value you ll decide what you ganna do with value\"\"\"\n",
+        "print(len(\"hello\"))\n",
+        "\n",
+        "#instead of wrting like this\n",
+        "\n",
+        "x = len(\"hello\")\n",
+        "print(x)\n",
+        "\n",
+        "x = len(input())\n",
+        "print(x ** 2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PiH_mx30R4mW",
+        "outputId": "e5ca206b-e2fb-4b0a-aad3-8c015a6ee942"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "5\n",
+            "hello\n",
+            "25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f6(y):\n",
+        "  return(y)\n",
+        "f6(10)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HeOV8Jb-UR8P",
+        "outputId": "6e709264-b625-49d6-947a-e2325f856de5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sum = 10\n",
+        "def f7(x):\n",
+        "  return x + sum\n",
+        "\n",
+        "f7(100)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wk7MNUdwVaDR",
+        "outputId": "0f7b241c-0dc7-4a34-db72-1883bc8f7bdb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "110"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sum = 100\n",
+        "\n",
+        "def f8(x):\n",
+        "  a = x + sum\n",
+        "\n",
+        "  return a\n",
+        "\n",
+        "print(f8(50))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_6u4rb4GVw0_",
+        "outputId": "e81008e3-5f37-4112-a046-cf1be7adacab"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "150\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#print sum of range of integers\n",
+        "N = 7\n",
+        "sum = 0\n",
+        "for i in range(1, N+1):\n",
+        "  print(i)\n",
+        "  sum += i\n",
+        "\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NYe-t2x6Wifz",
+        "outputId": "c3cca307-557e-4c5b-b22c-3e3bf91d862a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "28\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "N = 7\n",
+        "Sum = sum(range(1, N + 1))\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "id": "wB9WCO4FXQiY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#List comprehension"
+      ],
+      "metadata": {
+        "id": "7Nd9-lyR5Iqx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#List comprehension:- A Lc offers you smaller line of code that you can use to create new list from existing list\n",
+        "\n",
+        "fruits = ['apples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "\n",
+        "new_fruits = []\n",
+        "\n",
+        "for x in fruits:\n",
+        "  if 'a' in x:\n",
+        "    new_fruits.append(x)\n",
+        "  print(new_fruits)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "KP6JyxFV5HJn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fruits1 = ['apples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "#i am using list comprehension\n",
+        "new = [x for x in fruits1 if \"a\" in x]\n",
+        "print(new)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "50qTbN718NJP",
+        "outputId": "c64a7893-d25d-4e32-ec31-2e904294c887"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['apples', 'banana', 'pineapple', 'Mango']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fruits1 = ['apples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "new2 = [x for x in fruits1 if x != \"banana\"]\n",
+        "print(new2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cM3U_rdn9CwJ",
+        "outputId": "92587137-f18a-4a0f-e082-0d2cb28fd926"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['apples', 'pineapple', 'Mango', 'Kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using range function in LC\n",
+        "fruits2 = ['apples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "new3 =  [x for x in range(10)]\n",
+        "new4 = [x for x in range(10) if x < 6]\n",
+        "print(new3)\n",
+        "print(new4)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CDW6GPwr9zUr",
+        "outputId": "be227077-3733-4037-c578-85c252fae030"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+            "[0, 1, 2, 3, 4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using the string methods in LC\n",
+        "\n",
+        "fruit = ['aPples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "n = [x.upper() for x in fruit]\n",
+        "print(n)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nmSWmN2V-vb4",
+        "outputId": "ee08b8c7-c97f-404f-a589-9a2ddf84429c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['APPLES', 'BANANA', 'PINEAPPLE', 'MANGO', 'KIWI']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#replace banana with orange by using LC\n",
+        "fruit = ['aPples', 'banana','pineapple','Mango', 'Kiwi']\n",
+        "n1 = [x if x != \"banana\" else \"orange\" for x in fruit]\n",
+        "print(n1)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-OOtXfiD_k1N",
+        "outputId": "d7e5eb9e-8797-4fa9-9b5b-89efac420036"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['aPples', 'orange', 'pineapple', 'Mango', 'Kiwi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Array"
+      ],
+      "metadata": {
+        "id": "-w-PTH4lM5uu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from array import *"
+      ],
+      "metadata": {
+        "id": "fwovPjAeM_GU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arr = array('i',[1, 2, 3, 4, 5])\n",
+        "print(arr)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5FT9QbNhPvOy",
+        "outputId": "cd14cf1c-7ff4-4849-d262-57e55459e9e2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "array('i', [1, 2, 3, 4, 5])\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arr = array('i', [2, 4, 6, 8])"
+      ],
+      "metadata": {
+        "id": "ARCifz1yPQn0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "3ILIpFmVlzqZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
